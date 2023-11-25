@@ -1,0 +1,28 @@
+Registrar el Id, Nombre, Apellido, Dirección, Fecha de nacimiento, Teléfono y el Correo electrónico de los clientes de la compañía.
+Registrar para los productos la siguiente información: Código, Nombre, Precio, Número de Existencias y Categoría a la que pertenece.
+Se debe especificar en la factura los Datos del cliente y una tabla que muestre la Especificación del tipo de producto comprado, su precio, la cantidad suministrada y el total parcial. Al final de la factura debe calcularse el valor antes de impuestos y descuentos, y luego calcular el valor total de la compra.
+Un cliente puede pagar con las siguientes formas de pago: Efectivo, Tarjeta de crédito, Tarjeta débito, Paypal y Neteller.
+Un cliente puede generar varias facturas debido a sus distintas compras, pero jamás una misma factura podrá haber sido generada por más de un cliente.
+En una factura pueden contener varios productos vinculados, al igual que todos los productos están posibilitados a aparecer en todas las facturas.
+Un cliente puede pagar el monto total de una factura con varios métodos de pago.
+
+
+Entidades:
+	- Cliente 
+	- Producto 
+	- Factura 
+
+create database facturasmodulo;
+
+use facturasmodulo;
+
+CREATE TABLE cliente(
+	id int not null, 
+	nombre varchar(30) not null,
+	apellido_paterno varchar(30) not null,
+	apellido_materno varchar(30) not null,
+	direccion varchar(500),
+	fecha_nacimiento date not null,
+	telefono varchar(13) not null,	
+	primary key(id)
+);
